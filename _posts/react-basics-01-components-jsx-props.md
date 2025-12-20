@@ -6,6 +6,8 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
+> **注**: この記事では、React Nativeアプリケーションのコード例を使用してReactの基本概念を説明しています。React NativeとWeb版のReactでは、使用するコンポーネント名（`View`/`div`、`Text`/`span`など）やイベントハンドラー名（`onPress`/`onClick`、`onChangeText`/`onChange`など）が異なりますが、基本的な概念（コンポーネント、JSX、props、状態管理など）は同じです。
+
 Reactは、ユーザーインターフェースを構築するためのJavaScriptライブラリです。この記事では、Reactの最も基本的な概念である**コンポーネント**、**JSX**、**props**について、実際のTodoアプリケーションのコードを例に解説します。
 
 ## コンポーネントとは
@@ -28,19 +30,19 @@ export const AddTodo: React.FC = () => {
 
 ## JSXとは
 
-JSX（JavaScript XML）は、JavaScriptの中にHTMLライクな構文を書けるようにするReactの拡張構文です。見た目はHTMLに似ていますが、実際にはJavaScriptの式として評価されます。
+JSX（JavaScript XML）は、JavaScriptの中にXMLライクな構文を書けるようにするReactの拡張構文です。React Nativeでは、`<View>`や`<Text>`などのコンポーネントを使用します（Web版のReactでは`<div>`や`<span>`などのHTML要素を使用します）。見た目はHTMLに似ていますが、実際にはJavaScriptの式として評価されます。
 
 ### JSXの特徴
 
-1. **要素の記述**: HTMLタグのように記述できますが、小文字のタグ名は通常のHTML要素、大文字で始まるものはReactコンポーネントです。
+1. **要素の記述**: XMLライクな構文で記述できます。React Nativeでは`<View>`や`<Text>`などのコンポーネントを使用し、大文字で始まるものはカスタムReactコンポーネントです。
 
 ```tsx
-// HTMLライクな要素
+// React Nativeの基本コンポーネント
 <View style={styles.container}>
   <Text>Hello React</Text>
 </View>
 
-// Reactコンポーネント
+// カスタムReactコンポーネント
 <AddTodo />
 ```
 
@@ -150,7 +152,7 @@ export const AddTodo: React.FC = () => {
 ## まとめ
 
 - **コンポーネント**: UIを独立した再利用可能な部品に分割
-- **JSX**: JavaScriptの中にHTMLライクな構文を記述
+- **JSX**: JavaScriptの中にXMLライクな構文を記述（React Nativeでは`<View>`、`<Text>`など、Web版では`<div>`、`<span>`など）
 - **Props**: 親から子コンポーネントにデータを渡す仕組み
 
 これらの基本概念を理解することで、Reactアプリケーションの構造を把握し、効率的に開発を進められるようになります。次回は、コンポーネント内で状態を管理する`useState`と`useEffect`について解説します。

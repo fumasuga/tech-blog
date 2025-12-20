@@ -6,6 +6,8 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
+> **注**: この記事では、React Nativeアプリケーションのコード例を使用してReactの基本概念を説明しています。React NativeとWeb版のReactでは、使用するコンポーネント名（`View`/`div`、`Text`/`span`など）やイベントハンドラー名（`onPress`/`onClick`、`onChangeText`/`onChange`など）が異なりますが、基本的な概念（コンポーネント、JSX、props、状態管理など）は同じです。
+
 Reactコンポーネントで動的なUIを実現するには、**状態（state）**の管理が不可欠です。この記事では、Reactの基本的な状態管理フックである`useState`と`useEffect`について、Todoアプリの実例を通じて解説します。
 
 ## useState：コンポーネントの状態を管理

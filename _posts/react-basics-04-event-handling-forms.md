@@ -6,6 +6,8 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
+> **注**: この記事では、React Nativeアプリケーションのコード例を使用してReactの基本概念を説明しています。React NativeとWeb版のReactでは、使用するコンポーネント名（`View`/`div`、`Text`/`span`など）やイベントハンドラー名（`onPress`/`onClick`、`onChangeText`/`onChange`など）が異なりますが、基本的な概念（コンポーネント、JSX、props、状態管理など）は同じです。
+
 ユーザーとの対話的なUIを構築するには、**イベントハンドリング**と**フォーム処理**が重要です。この記事では、Reactでのイベント処理の方法と、フォーム入力の管理について、Todoアプリの実例を通じて解説します。
 
 ## イベントハンドリングの基本
@@ -48,7 +50,7 @@ const handleChange = (event: any) => {
 
 ## フォーム入力の管理
 
-Reactでは、フォーム入力は**制御コンポーネント（Controlled Component）**として管理するのが一般的です。入力値は`useState`で管理し、`value`と`onChange`で制御します。
+Reactでは、フォーム入力は**制御コンポーネント（Controlled Component）**として管理するのが一般的です。React Nativeでは、入力値は`useState`で管理し、`value`と`onChangeText`で制御します（Web版のReactでは`onChange`を使用します）。
 
 ### 基本的な入力フィールド
 
@@ -271,8 +273,8 @@ React Nativeでは、イベントの伝播を制御する必要がある場合�
 
 ## まとめ
 
-- **イベントハンドラー**: 関数を属性として渡してイベントを処理
-- **制御コンポーネント**: `value`と`onChange`で入力値を管理
+- **イベントハンドラー**: 関数を属性として渡してイベントを処理（React Nativeでは`onPress`、Web版では`onClick`）
+- **制御コンポーネント**: `value`と`onChangeText`（React Native）または`onChange`（Web版）で入力値を管理
 - **バリデーション**: 入力値の検証でデータの整合性を保つ
 - **条件付きレンダリング**: 入力状態に応じてUIを変更
 - **アニメーション**: イベントと組み合わせて視覚的フィードバックを提供

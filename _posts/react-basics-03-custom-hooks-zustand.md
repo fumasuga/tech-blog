@@ -6,6 +6,8 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
+> **注**: この記事では、React Nativeアプリケーションのコード例を使用してReactの基本概念を説明しています。React NativeとWeb版のReactでは、使用するコンポーネント名（`View`/`div`、`Text`/`span`など）やイベントハンドラー名（`onPress`/`onClick`、`onChangeText`/`onChange`など）が異なりますが、基本的な概念（コンポーネント、JSX、props、状態管理など）は同じです。
+
 複数のコンポーネント間で状態を共有したり、ロジックを再利用したりする場合、**カスタムフック**や**状態管理ライブラリ**が役立ちます。この記事では、カスタムフックの作成方法と、軽量な状態管理ライブラリである**Zustand**の使い方を、Todoアプリの実例を通じて解説します。
 
 ## カスタムフックとは
@@ -216,7 +218,36 @@ const { t, changeLanguage } = useLanguageStore();
 
 ### カスタムフックの例
 
+カスタムフックの例として、ローカルストレージを使用するフックを示します。React Nativeでは`AsyncStorage`、Web版では`window.localStorage`を使用します：
+
 ```tsx
+// React Native版（AsyncStorageを使用）
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+function useAsyncStorage(key: string, initialValue: string) {
+  const [storedValue, setStoredValue] = useState(initialValue);
+
+  useEffect(() => {
+    AsyncStorage.getItem(key).then((value) => {
+      if (value !== null) {
+        setStoredValue(JSON.parse(value));
+      }
+    });
+  }, [key]);
+
+  const setValue = async (value: string) => {
+    try {
+      setStoredValue(value);
+      await AsyncStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return [storedValue, setValue];
+}
+
+// Web版（window.localStorageを使用）
 function useLocalStorage(key: string, initialValue: string) {
   const [storedValue, setStoredValue] = useState(() => {
     try {
