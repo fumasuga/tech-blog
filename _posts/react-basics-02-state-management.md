@@ -1,5 +1,5 @@
 ---
-title: "Reactの状態管理：useStateとuseEffect"
+title: "Todoアプリで学ぶReactの状態管理：useStateとuseEffect"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-20T10:02:00.000Z"
 ogImage:

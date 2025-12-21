@@ -1,5 +1,5 @@
 ---
-title: "カスタムフックと状態管理ライブラリ：Zustand"
+title: "Todoアプリで学ぶカスタムフックと状態管理ライブラリ：Zustand"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-20T10:03:00.000Z"
 ogImage:

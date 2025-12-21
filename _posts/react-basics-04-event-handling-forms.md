@@ -1,5 +1,5 @@
 ---
-title: "イベントハンドリングとフォーム処理"
+title: "Todoアプリで学ぶイベントハンドリングとフォーム処理"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-20T10:04:00.000Z"
 ogImage:
