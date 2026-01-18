@@ -24,9 +24,6 @@ export default function Index() {
           <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-slate-100">
             最近の投稿
           </h1>
-          <p className="text-sm text-slate-600 dark:text-slate-300">
-            最近の投稿を確認できます。必要に応じてページ切り替えをご利用ください。
-          </p>
         </section>
 
         <Suspense fallback={<PostListFallback />}>

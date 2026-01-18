@@ -9,9 +9,6 @@ export function Footer() {
       <Container>
         <div className="py-16 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-3 lg:max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">
-              Tech Blog
-            </p>
             <h3 className="text-3xl lg:text-[2.4rem] font-bold tracking-tight leading-tight text-slate-900 dark:text-slate-50">
               学びをアウトプットするブログ
             </h3>
