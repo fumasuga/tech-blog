@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：Propsとデータの表示"
+title: "React 19：Propsとデータの表示"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T10:20:00.000Z"
 ogImage:

@@ -1,5 +1,5 @@
 ---
-title: "Todoアプリで学ぶReactの基本：コンポーネント、JSX、props"
+title: "コンポーネント、JSX、props"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-20T10:01:00.000Z"
 ogImage:

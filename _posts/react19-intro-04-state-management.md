@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：状態管理（useState）"
+title: "React 19：状態管理（useState）"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T10:30:00.000Z"
 ogImage:

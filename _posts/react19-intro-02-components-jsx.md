@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：コンポーネントとJSX"
+title: "React 19：コンポーネントとJSX"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T10:10:00.000Z"
 ogImage:

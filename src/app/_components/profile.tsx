@@ -5,7 +5,7 @@ export function Profile() {
     <article className="mb-12">
       <div className="container max-w-4xl mx-auto px-4">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-24 h-24 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-sm transition-all duration-300 hover:scale-105 p-2">
+          <div className="w-24 h-24 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center shadow-sm transition-all duration-300 hover:scale-105 p-2">
             <Image
               src="/favicon/egg-fried.svg"
               alt="Profile"

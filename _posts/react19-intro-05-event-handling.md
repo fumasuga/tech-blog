@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：イベントハンドリング"
+title: "React 19：イベントハンドリング"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T10:40:00.000Z"
 ogImage:

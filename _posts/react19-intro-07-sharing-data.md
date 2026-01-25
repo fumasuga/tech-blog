@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：コンポーネント間でのデータ共有"
+title: "React 19：コンポーネント間でのデータ共有"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T11:00:00.000Z"
 ogImage:

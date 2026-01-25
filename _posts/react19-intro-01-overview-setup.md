@@ -1,5 +1,5 @@
 ---
-title: "React 19入門：概要とセットアップ"
+title: "React 19：セットアップ"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-12-21T10:00:00.000Z"
 ogImage:
