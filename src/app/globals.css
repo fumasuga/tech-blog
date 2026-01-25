@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+  
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer utilities {
+  /* ダークモードでのcodeタグのスタイル改善 */
+  .znc code:not(pre code) {
+    @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  /* コードブロックのスタイル改善 */
+  .znc pre {
+    @apply bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700;
+  }
+
+  .znc pre code {
+    @apply bg-transparent text-slate-900 dark:text-slate-100;
+  }
+}

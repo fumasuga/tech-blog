@@ -34,7 +34,7 @@ function buildExcerpt(content: string | undefined, fallback?: string) {
 
 export function PostList({ posts }: PostListProps) {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-1">
       {posts.map((post) => (
         <PostPreview
           key={post.slug}

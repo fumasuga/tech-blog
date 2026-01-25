@@ -11,7 +11,7 @@ export function PostHeader({ title, date }: PostHeaderProps) {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="max-w-4xl mx-auto">
-        <div className="mb-6 text-lg">
+        <div className="mb-8 text-sm text-slate-600 dark:text-slate-400">
           <DateFormatter dateString={date} />
         </div>
       </div>

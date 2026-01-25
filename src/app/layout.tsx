@@ -1,5 +1,6 @@
 import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
+import { ThemeScript } from "@/app/_components/theme-script";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
@@ -45,8 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -80,7 +82,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(inter.className, "bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100")}
       >
         <Header />
         <div className="min-h-screen">{children}</div>

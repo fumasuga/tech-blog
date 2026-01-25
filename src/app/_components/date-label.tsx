@@ -20,20 +20,12 @@ function DateLabel() {
   }, []);
 
   return (
-    <div className="flex flex-row items-center">
-      <p className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-2 mb-0">
-        {formattedDate}
-      </p>
-      <div className="flex flex-col items-end justify-center text-right ml-2 mr-2">
-        <p className="text-xs md:text-sm text-gray-600">
-          {weekday.toUpperCase()}
-        </p>
-        <p className="text-xs md:text-sm text-gray-600">
-          {formattedYear}
-        </p>
-      </div>
+    <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+      <span className="font-normal tabular-nums">{formattedYear}</span>
+      <span className="font-normal tabular-nums">{formattedDate}</span>
+      <span className="font-normal">{weekday.toUpperCase()}</span>
     </div>
-  )
-};
+  );
+}
 
 export default DateLabel;
