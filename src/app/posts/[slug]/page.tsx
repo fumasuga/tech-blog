@@ -5,7 +5,8 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
-import 'zenn-content-css';
+import { ZennEmbedLoader } from "@/app/_components/zenn-embed-loader";
+import "zenn-content-css";
 
 
 type PostPageProps = {
@@ -27,6 +28,7 @@ export default async function Post({ params }: PostPageProps) {
   return (
     <main>
       <Container>
+        <ZennEmbedLoader />
         <article className="mb-32">
           <PostHeader
             title={post.title}
