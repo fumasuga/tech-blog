@@ -21,11 +21,11 @@ export function PostPreview({
       >
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
           <div className="flex-1 min-w-0">
-            <h3 className="text-base font-normal leading-snug text-slate-900 dark:text-slate-100 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors duration-200">
+            <h3 className="text-[12px] md:text-base font-normal leading-snug tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors duration-200">
               {title}
             </h3>
             {excerpt && (
-              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+              <p className="mt-1 text-[12px] md:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
                 {excerpt}
               </p>
             )}

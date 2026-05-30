@@ -5,7 +5,7 @@ export default function CVPage() {
     <main>
       <Container>
         <div className="mb-12">
-          <h1 className="text-3xl font-normal mb-6 text-slate-900 dark:text-slate-100">
+          <h1 className="text-[16px] md:text-3xl font-semibold md:font-normal mb-6 text-slate-900 dark:text-slate-100">
           </h1>
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <p className="text-slate-600 dark:text-slate-400">

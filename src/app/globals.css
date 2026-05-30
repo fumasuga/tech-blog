@@ -6,13 +6,81 @@
   body {
     @apply antialiased;
   }
-  
+
+  @media (max-width: 767px) {
+    body {
+      -webkit-font-smoothing: auto;
+      -moz-osx-font-smoothing: auto;
+    }
+  }
+
   a {
     @apply transition-colors;
   }
 }
 
 @layer utilities {
+  @media (max-width: 767px) {
+    .znc {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .znc p,
+    .znc ul,
+    .znc ol,
+    .znc blockquote {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .znc code:not(pre code) {
+      font-size: 12px;
+    }
+
+    /* 12px ベースの見出しスケール */
+    .znc h1 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .znc h2 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.45;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .znc h3 {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.45;
+      margin-top: 0.875rem;
+      margin-bottom: 0.375rem;
+    }
+
+    .znc h4 {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-top: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .znc h5,
+    .znc h6 {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-top: 0.625rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
   /* ダークモードでのcodeタグのスタイル改善 */
   .znc code:not(pre code) {
     @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-1.5 py-0.5 rounded text-sm font-mono;

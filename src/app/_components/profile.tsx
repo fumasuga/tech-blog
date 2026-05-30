@@ -14,7 +14,7 @@ export function Profile() {
               className="w-full h-full object-contain"
             />
           </div>
-          <h1 className="text-xl font-normal text-slate-900 dark:text-slate-100">
+          <h1 className="text-[12px] md:text-xl font-normal tracking-tight text-slate-900 dark:text-slate-100">
             @fumasuga
           </h1>
         </div>
