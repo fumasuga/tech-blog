@@ -4,10 +4,21 @@ export function ThemeScript() {
       dangerouslySetInnerHTML={{
         __html: `
           (function() {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.documentElement.classList.add('dark');
+            function applyTheme(isDark) {
+              var root = document.documentElement;
+              if (isDark) {
+                root.classList.add('dark');
+                root.setAttribute('data-theme', 'dark');
+              } else {
+                root.classList.remove('dark');
+                root.setAttribute('data-theme', 'light');
+              }
             }
+            var theme = localStorage.getItem('theme');
+            applyTheme(
+              theme === 'dark' ||
+                (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            );
           })();
         `,
       }}

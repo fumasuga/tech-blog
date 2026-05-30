@@ -6,12 +6,10 @@ type PostBodyProps = {
 
 export function PostBody({ content }: PostBodyProps) {
   return (
-    <div className="max-w-4xl mx-auto znc">
-      <div
-        suppressHydrationWarning
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
+    <div
+      suppressHydrationWarning
+      className={`max-w-4xl mx-auto znc ${markdownStyles["markdown"]}`}
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   );
 }

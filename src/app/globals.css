@@ -81,6 +81,60 @@
     }
   }
 
+  /* Tailwind の .dark と Zenn の data-theme を両方サポート */
+  .dark .znc,
+  [data-theme^="dark"] .znc {
+    --c-bg-base: var(--c-dark-blue-1100);
+    --c-bg-dim: var(--c-dark-blue-900);
+    --c-bg-warning: #39352c;
+    --c-bg-warning-icon: #e5a21a;
+    --c-bg-alert: #311818;
+    --c-bg-alert-icon: #c63939;
+    --c-bg-code: var(--c-dark-gray-1000);
+    --c-bg-code-block: #1a2638;
+    --c-bg-image: #fff;
+    --c-border: var(--c-dark-gray-1000);
+    --c-border-emphasis: var(--c-dark-gray-900);
+    --c-text-subtle: #cbd5e1;
+    --c-text-link: var(--c-blue-500);
+    color: #f1f5f9;
+  }
+
+  /* 本文・リスト・表など（Zenn / CSS Modules の上書きを確実にする） */
+  .dark .znc :is(p, li, td, th, dd, dt, figcaption, summary),
+  [data-theme^="dark"] .znc :is(p, li, td, th, dd, dt, figcaption, summary) {
+    color: #f1f5f9;
+  }
+
+  .dark .znc :is(h1, h2, h3, h4, h5, h6),
+  [data-theme^="dark"] .znc :is(h1, h2, h3, h4, h5, h6) {
+    color: #f8fafc;
+    border-color: var(--c-border);
+  }
+
+  .dark .znc blockquote,
+  [data-theme^="dark"] .znc blockquote {
+    color: #cbd5e1;
+    border-left-color: #64748b;
+  }
+
+  .dark .znc strong,
+  [data-theme^="dark"] .znc strong {
+    color: #f8fafc;
+  }
+
+  .dark .znc ul > li::marker,
+  [data-theme^="dark"] .znc ul > li::marker,
+  .dark .znc ol > li::marker,
+  [data-theme^="dark"] .znc ol > li::marker {
+    color: #94a3b8;
+  }
+
+  .dark .znc code:not(pre code),
+  [data-theme^="dark"] .znc code:not(pre code) {
+    color: #f1f5f9;
+  }
+
   /* ダークモードでのcodeタグのスタイル改善 */
   .znc code:not(pre code) {
     @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-1.5 py-0.5 rounded text-sm font-mono;

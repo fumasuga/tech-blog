@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { applyTheme } from "@/lib/apply-theme";
 
 export function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -15,11 +16,7 @@ export function DarkModeToggle() {
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem("theme")) {
         setIsDark(e.matches);
-        if (e.matches) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+        applyTheme(e.matches);
       }
     };
     mediaQuery.addEventListener("change", handleChange);
@@ -30,13 +27,8 @@ export function DarkModeToggle() {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
     
-    if (newIsDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    applyTheme(newIsDark);
+    localStorage.setItem("theme", newIsDark ? "dark" : "light");
   };
 
   return (

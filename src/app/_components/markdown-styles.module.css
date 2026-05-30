@@ -1,37 +1,58 @@
 .markdown {
-  @apply text-[12px] leading-[1.7] tracking-tight text-slate-800 dark:text-slate-200;
-  @apply md:text-lg md:leading-relaxed md:tracking-normal md:text-slate-900 md:dark:text-slate-100;
+  @apply text-[12px] md:text-lg leading-[1.7] md:leading-relaxed tracking-tight md:tracking-normal;
+  @apply text-slate-700 dark:text-slate-100;
 }
 
 .markdown p,
+.markdown li,
+.markdown td,
+.markdown th,
+.markdown dd,
+.markdown dt,
+.markdown figcaption {
+  @apply text-slate-700 dark:text-slate-100;
+}
+
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
   @apply my-4 md:my-6;
 }
 
+.markdown blockquote {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
 .markdown h1 {
-  @apply text-[15px] font-semibold mt-6 mb-2 leading-snug;
+  @apply text-[15px] font-semibold mt-6 mb-2 leading-snug text-slate-900 dark:text-slate-50;
   @apply md:text-4xl md:font-normal md:mt-12 md:mb-4;
 }
 
 .markdown h2 {
-  @apply text-[14px] font-semibold mt-5 mb-2 leading-snug;
+  @apply text-[14px] font-semibold mt-5 mb-2 leading-snug text-slate-900 dark:text-slate-50;
   @apply md:text-3xl md:font-normal md:mt-12 md:mb-4;
 }
 
 .markdown h3 {
-  @apply text-[13px] font-medium mt-4 mb-2 leading-snug;
+  @apply text-[13px] font-medium mt-4 mb-2 leading-snug text-slate-900 dark:text-slate-50;
   @apply md:text-2xl md:font-normal md:mt-8 md:mb-4;
 }
 
 .markdown h4 {
-  @apply text-[12px] font-semibold mt-4 mb-1 leading-snug;
+  @apply text-[12px] font-semibold mt-4 mb-1 leading-snug text-slate-900 dark:text-slate-50;
   @apply md:text-xl md:font-normal md:mt-6 md:mb-3;
 }
 
 .markdown h5,
 .markdown h6 {
-  @apply text-[12px] font-medium mt-3 mb-1 leading-snug;
+  @apply text-[12px] font-medium mt-3 mb-1 leading-snug text-slate-900 dark:text-slate-50;
   @apply md:text-lg md:font-normal md:mt-4 md:mb-2;
+}
+
+.markdown a {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.markdown strong {
+  @apply text-slate-900 dark:text-slate-50;
 }
