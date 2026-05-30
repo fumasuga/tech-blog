@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "SugaStack.",
     template: "%s | SugaStack.",
   },
-  description: "学びをアウトプットするITエンジニアのブログ",
+  description: "ITエンジニアのブログ",
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SugaStack.",
-    description: "学びをアウトプットするITエンジニアのブログ",
+    description: "ITエンジニアのブログ",
     images: ["/favicon/egg-fried.svg"],
   },
 };

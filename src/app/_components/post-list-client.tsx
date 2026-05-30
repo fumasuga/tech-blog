@@ -37,7 +37,7 @@ function buildExcerpt(content: string | undefined, fallback?: string) {
     : plainExcerpt;
 }
 
-const PAGE_LINK_BASE = "/blog";
+const PAGE_LINK_BASE = "/";
 
 function buildHref(page: number, basePath?: string) {
   const prefix = basePath ?? PAGE_LINK_BASE;
