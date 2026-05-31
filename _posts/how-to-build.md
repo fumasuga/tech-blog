@@ -2,6 +2,11 @@
 title: "自分のブログを作る"
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-08-08T09:59:00.322Z"
+tags:
+  - nextjs
+  - firebase
+  - github
+  - docker
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---

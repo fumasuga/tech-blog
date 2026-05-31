@@ -4,38 +4,13 @@ import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Post } from "@/interfaces/post";
+import { normalizeTechTags } from "@/lib/tech-tags";
 import { PostPreview } from "./post-preview";
 
 type PostListClientProps = {
   allPosts: Post[];
   postsPerPage?: number;
 };
-
-function buildExcerpt(content: string | undefined, fallback?: string) {
-  if (!content) {
-    return fallback;
-  }
-
-  const firstParagraph = content
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)[0];
-
-  const rawExcerpt = firstParagraph || fallback || "";
-  const plainExcerpt = rawExcerpt
-    .replace(/[#>*`]/g, "")
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  if (!plainExcerpt) {
-    return "本文の概要が準備中です。";
-  }
-
-  return plainExcerpt.length > 140
-    ? `${plainExcerpt.slice(0, 140)}…`
-    : plainExcerpt;
-}
 
 const PAGE_LINK_BASE = "/";
 
@@ -107,7 +82,6 @@ export function PostListClient({
   const searchParams = useSearchParams();
   const [mounted, setMounted] = useState(false);
 
-  // クライアントサイドでのみsearchParamsを読み取る
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -130,11 +104,11 @@ export function PostListClient({
     };
   }, [allPosts, postsPerPage, pageParam, mounted]);
 
-  const postsWithExcerpt = useMemo(
+  const postsWithTags = useMemo(
     () =>
       visiblePosts.map((post) => ({
         ...post,
-        excerpt: post.excerpt || buildExcerpt(post.content, post.excerpt),
+        tags: normalizeTechTags(post.tags),
       })),
     [visiblePosts]
   );
@@ -142,13 +116,13 @@ export function PostListClient({
   return (
     <>
       <section className="flex flex-col gap-1 mb-8">
-        {postsWithExcerpt.map((post) => (
+        {postsWithTags.map((post) => (
           <PostPreview
             key={post.slug}
             title={post.title}
             date={post.date}
             slug={post.slug}
-            excerpt={post.excerpt}
+            tags={post.tags}
           />
         ))}
       </section>
@@ -156,4 +130,3 @@ export function PostListClient({
     </>
   );
 }
-

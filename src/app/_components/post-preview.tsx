@@ -1,17 +1,19 @@
 import Link from "next/link";
 
 import { Post } from "@/interfaces/post";
+import type { TechTagId } from "@/lib/tech-tags";
 import DateFormatter from "./date-formatter";
+import { TechTagList } from "./tech-tag-list";
 
 type PostPreviewProps = Pick<Post, "title" | "slug" | "date"> & {
-  excerpt?: string;
+  tags?: TechTagId[];
 };
 
 export function PostPreview({
   title,
   date,
   slug,
-  excerpt,
+  tags = [],
 }: PostPreviewProps) {
   return (
     <article className="group">
@@ -19,7 +21,7 @@ export function PostPreview({
         href={`/posts/${slug}`}
         className="block py-3 px-2 -mx-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
       >
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1.5">
           <div className="flex items-baseline justify-between gap-x-3 gap-y-0.5">
             <h3 className="flex-1 min-w-0 text-sm sm:text-base font-normal leading-snug tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors duration-200">
               {title}
@@ -28,11 +30,7 @@ export function PostPreview({
               <DateFormatter dateString={date} />
             </span>
           </div>
-          {excerpt && (
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
-              {excerpt}
-            </p>
-          )}
+          <TechTagList tags={tags} />
         </div>
       </Link>
     </article>

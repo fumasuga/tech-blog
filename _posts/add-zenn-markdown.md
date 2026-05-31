@@ -2,6 +2,11 @@
 title: "Zennマークダウンを使う"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2025-08-08T09:59:00.322Z"
+tags:
+  - nextjs
+  - typescript
+  - zenn
+  - react
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
